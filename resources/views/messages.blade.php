@@ -87,11 +87,14 @@
         })
             .then(function (response) {
                 console.log(response.data);
-                fetchMessages(); // Refresh messages after sending reply
+                fetchMessages();
+
+                // Refresh messages after sending reply
             })
             .catch(function (error) {
                 console.error('Error sending reply: ', error);
             });
+        location.reload();
     }
 
     // Fetch messages when the page loads

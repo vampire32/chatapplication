@@ -33,6 +33,7 @@
             .catch(function (error) {
                 console.error(error);
             });
+        location.reload();
     });
 </script>
 </body>
