@@ -65,7 +65,7 @@ class MessageController extends Controller
     {
         $userId = auth()->id();
 
-        $messages = Message::with(['user', 'sender']) // Eager load the user and sender relationships
+        $messages = Message::with('user') // Eager load the user relationship
         ->where('recipient_id', $userId)
             ->get();
 
